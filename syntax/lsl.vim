@@ -29,9 +29,9 @@ syn match       lOperator       "[<>]"
 syn match       lOperator       "[<>][<>]"
 syn cluster     lCommentGroup   contains=lTodo
 syn match       lComment        "//.*$" contains=@lCommentGroup
-syn region      lComment         start=+/\*+ end=+\*/+ contains=@lCommentGroup
+syn region      lComment        start=+/\*+ end=+\*/+ contains=@lCommentGroup
 
-syn region      lString         start=+"+  skip=+\\\|\"+  end=+"+
+syn region	lString		start=+L\="+ skip=+\\\\\|\\"+ end=+"+
 syn match       lNumber         "-\=\<\d\>"
 syn match       lHexNumber      "0x\<\d\>"
 syn match       lFloat          "-\=\<\d\.\d\>"
